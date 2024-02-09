@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Selfjoins</title>
+</head>
+<body>
+    <center>
+        <h1>Self Joins</h1>
+        <table border="3px">
+            <tr style="color: red;">
+                <th>Ename</th>
+                <th>Manager Name</th>
+                <th>Salary</th>
+                <th>Manager Sal</th>
+                <th>HireDate</th>
+            </tr>
+
+                {% for em in EMO %}
+            <tr style="color: blue;">
+                <td>{{em.ename}}</td>
+                <td>{{em.mgr.ename}}</td>
+                <td>{{em.sal}}</td>
+                <td>{{em.mgr.sal}}</td>
+                <td>{{em.hiredate}}</td>
+            </tr>
+                {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
